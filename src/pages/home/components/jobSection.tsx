@@ -6,7 +6,7 @@ function JobSection() {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const res = await fetch("http://localhost:8000/jobs", {
+      const res = await fetch("https://aidf-back-end-production-siluni.up.railway.app/jobs", {
         method: "GET",
       });
       const data: Job[] = await res.json();

@@ -24,7 +24,7 @@ function JobPage() {
 
   useEffect(() => {
     const fetchJob = async () => {
-      const res = await fetch(`http://localhost:8000/jobs/${id}`, {
+      const res = await fetch(`https://aidf-back-end-production-siluni.up.railway.app/jobs/${id}`, {
         method: "GET",
       });
       const data: Job = await res.json();
@@ -46,7 +46,7 @@ function JobPage() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const res = await fetch("http://localhost:8000/jobApplications", {
+    const res = await fetch("https://aidf-back-end-production-siluni.up.railway.app/jobApplications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
