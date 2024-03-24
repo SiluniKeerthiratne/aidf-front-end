@@ -46,7 +46,7 @@ function JobPage() {
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const res = await fetch("https://aidf-back-end-production-siluni.up.railway.app/jobApplications", {
+    await fetch("https://aidf-back-end-production-siluni.up.railway.app/jobApplications", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
